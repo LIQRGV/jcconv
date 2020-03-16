@@ -13,16 +13,16 @@
    Simple example of usage is followings
 
        >>> from jcconv import *
-       >>> print hira2kata('あいうえお')   # hiragana to katakana
+       >>> print(hira2kata('あいうえお'))   # hiragana to katakana
        アイウエオ
-       >>> print kata2hira('カタカナ')     # katakana to hiragana
+       >>> print(kata2hira('カタカナ'))     # katakana to hiragana
        かたかな
-       >>> print half2hira('ﾊﾝｶｸｶﾀｶﾅ')      # half-width kana to hiragana
-       はんかくかたかな       
-       >>> print half2wide('hello jcconv') # half-width alphabet to wide-width
+       >>> print(half2hira('ﾊﾝｶｸｶﾀｶﾅ'))      # half-width kana to hiragana
+       はんかくかたかな
+       >>> print(half2wide('hello jcconv')) # half-width alphabet to wide-width
        ｈｅｌｌｏ ｊｃｃｏｎｖ
-       >>> print wide2half('ＷＩＤＥ')     # wide-width alphabet to half-width
-       wide
+       >>> print(wide2half('ＷＩＤＥ'))     # wide-width alphabet to half-width
+       WIDE
 """
 
 __author__  = "Matsumoto Taichi"
