@@ -29,4 +29,4 @@ __author__  = "Matsumoto Taichi"
 __version__ = "0.2.3"
 __license__ = "MIT License"
 
-from jcconv import *
+from . import *

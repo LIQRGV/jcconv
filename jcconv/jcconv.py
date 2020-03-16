@@ -5,6 +5,11 @@ __all__ = ['hira2kata', 'kata2hira', 'half2hira', 'hira2half', 'kata2half',
            'check_hira', 'check_kata', 'check_half']
 
 import re
+import sys
+
+is_python3 = sys.version_info.major == 3
+if is_python3:
+    unicode = str
 
 # convert hiragana to katakana
 def hira2kata(text, reserved=[]):
@@ -86,7 +91,7 @@ def convert(text, frm, to, reserved=[]):
             text = _multiple_replace(text, conv_table)
         return uflag and text or text.encode('utf-8')
     else:
-        raise "Invalid Parameter"
+        raise Exception("Invalid Parameter")
 
 def check(text, char_set_type):
     uflag = isinstance(text, unicode)
@@ -124,13 +129,13 @@ class jcconv:
 if __name__ == '__main__':
     import codecs, sys
     sys.stdout = codecs.getwriter('utf_8')(sys.stdout)
-    
-    print convert(u'あいうえお', jcconv.HIRA, jcconv.HALF, [u'う'])
-    print convert(u'ばいおりん', jcconv.HIRA, jcconv.HALF)
-    print convert(u'ﾊﾞｲｵﾘﾝ', jcconv.HALF, jcconv.HIRA)
-    print convert(u'12345', jcconv.HNUM, jcconv.WNUM)
 
-    print check_hira(u'ひらがな')
-    print check_hira(u'カタカナ')
-    print check_kata(u'ひらがな')
-    print check_kata(u'カタカナ')
+    print(convert(u'あいうえお', jcconv.HIRA, jcconv.HALF, [u'う']))
+    print(convert(u'ばいおりん', jcconv.HIRA, jcconv.HALF))
+    print(convert(u'ﾊﾞｲｵﾘﾝ', jcconv.HALF, jcconv.HIRA))
+    print(convert(u'12345', jcconv.HNUM, jcconv.WNUM))
+
+    print(check_hira(u'ひらがな'))
+    print(check_hira(u'カタカナ'))
+    print(check_kata(u'ひらがな'))
+    print(check_kata(u'カタカナ'))

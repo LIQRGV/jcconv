@@ -14,8 +14,8 @@ if __name__ == '__main__':
   suite  = loader.loadTestsFromModule(jcconv_test)
   suite.run(result)
   if not result.wasSuccessful():
-    print "unit tests have failed!"
-    print "aborted to make a source distribution"
+    print("unit tests have failed!")
+    print("aborted to make a source distribution")
     sys.exit(1)
 
   # build distribution package
