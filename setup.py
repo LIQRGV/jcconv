@@ -3,15 +3,15 @@ from setuptools import setup
 import sys
 import unittest
 
-import jcconv
-from jcconv import __version__, __license__, __author__
+import jcconv3
+from jcconv3 import __version__, __license__, __author__
 
 if __name__ == '__main__':
-  from jcconv import jcconv_test
+  from jcconv3 import jcconv3_test
   # run module test
   loader = unittest.TestLoader()
   result = unittest.TestResult()
-  suite  = loader.loadTestsFromModule(jcconv_test)
+  suite  = loader.loadTestsFromModule(jcconv3_test)
   suite.run(result)
   if not result.wasSuccessful():
     print("unit tests have failed!")
@@ -20,15 +20,15 @@ if __name__ == '__main__':
 
   # build distribution package
   setup(
-    packages         = ('jcconv',),
-    name             = 'jcconv',
+    packages         = ('jcconv3',),
+    name             = 'jcconv3',
     version          = __version__,
-    py_modules       = ['jcconv/jcconv', 'jcconv/jcconv_test'],
+    py_modules       = ['jcconv3/jcconv3', 'jcconv3/jcconv3_test'],
     description      = 'jcconv "JapaneseCharacterCONVerter", interconvert hiragana, katakana, halfwidth kana',
-    long_description = jcconv.__doc__,
+    long_description = jcconv3.__doc__,
     author           = __author__,
     author_email     = 'taichino@gmail.com',
-    url              = 'http://github.com/taichino/jcconv',
+    url              = 'http://github.com/LIQRGV/jcconv',
     keywords         = 'japanese converter, hiragana, katakana, half-width kana',
     license          = __license__,
     classifiers      = ["Development Status :: 3 - Alpha",

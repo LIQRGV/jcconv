@@ -12,7 +12,7 @@
 
    Simple example of usage is followings
 
-       >>> from jcconv import *
+       >>> from jcconv3 import *
        >>> print(hira2kata('あいうえお'))   # hiragana to katakana
        アイウエオ
        >>> print(kata2hira('カタカナ'))     # katakana to hiragana
@@ -29,7 +29,7 @@ __author__  = ["Septian Hari", "Matsumoto Taichi"]
 __version__ = "1.2.3"
 __license__ = "MIT License"
 
-from .jcconv import *
+from .jcconv3 import *
 
 __all__ = ['hira2kata', 'kata2hira', 'half2hira', 'hira2half', 'kata2half',
            'half2kata', 'half2wide', 'wide2half', 'convert',

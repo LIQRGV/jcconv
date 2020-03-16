@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from jcconv import *
+from jcconv3 import *
 
 class JcconvTest(unittest.TestCase):
     def testKana(self):
