@@ -25,8 +25,8 @@
        WIDE
 """
 
-__author__  = "Matsumoto Taichi"
-__version__ = "0.2.3"
+__author__  = ["Septian Hari", "Matsumoto Taichi"]
+__version__ = "1.2.3"
 __license__ = "MIT License"
 
 from .jcconv import *
